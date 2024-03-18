@@ -1,0 +1,51 @@
+.banner {
+
+    width: 100%;
+    height: 500px;
+}
+
+.container-blog-related b {
+
+	font-size: 24px;
+}
+
+.img-blog {
+
+	height: 265px;
+}
+
+.short-content {
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    color: gray;
+}
+
+
+.container-blog {
+
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s;
+
+}
+
+.container-blog:hover {
+    box-shadow: 5px 5px 5px #d2d2d2;
+    transition: 0.2s;
+}
+
+.container-content-blog {
+
+	border: 1px solid #e2e2e2;
+	border-radius: 5px;
+
+}
+
+.title-detail-blog {
+
+	font-size: 26px;
+}

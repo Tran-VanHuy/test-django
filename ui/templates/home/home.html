@@ -1,0 +1,138 @@
+{% extends 'layout.html'%}
+{% block title %} Homepage {% endblock %}
+{% load static %}
+{% block static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css'%}">
+{% endblock %}
+{% block content %}
+<!-- banner -->
+<div>
+    <img src="https://nhatrangnow.com/wp-content/uploads/2022/05/PicsArt_08-25-09.22.38.jpg" class="banner">
+</div>
+<!-- item blog -->
+<div class=" container py-5">
+    <div class="row">
+        {% if blog|length > 0 %}
+        {% for item in blog %}
+        <div class="col-4 pb-3">
+            <div class="container-blog h-100 d-flex flex-column">
+                <div>
+                    <img src="{{ item.image }}" class="w-100 img-blog">
+                </div>
+                <div class="p-2 d-flex flex-column justify-content-between flex-fill">
+                    <div>
+                        <a href="{% url 'blog-detail' item.id %}">
+                            <h1>{{ item.title }}</h1>
+                        </a>
+                        <div class="text-right">18/03/2024</div>
+                        <div class="short-content mb-2">
+                            <span>{{ item.short_content }}</span>
+                        </div>
+                    </div>
+                    <div class="text-end px-2">
+                        <a href="{% url 'blog-detail' item.id %}">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div class="col-4 pb-3">
+            <div class="container-blog h-100 d-flex flex-column">
+                <div>
+                    <img src="https://nhatrangnow.com/wp-content/uploads/2022/05/PicsArt_08-25-09.22.38.jpg" class="w-100 img-blog">
+                </div>
+                <div class="p-2 d-flex flex-column justify-content-between flex-fill">
+                    <div>
+                        <h1>Kinh nghiệm đi du lịch nha trang</h1>
+                        <div class="text-right">18/03/2024</div>
+                        <div class="short-content mb-2">
+                            <span>Kinh nghiệm đi du lịch nha trang giành cho bạn, Kinh nghiệm đi du lịch nha trang giành cho bạn </span>
+                        </div>
+                    </div>
+                    <div class="text-end px-2">
+                        <a href="#" cl>Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 pb-3">
+            <div class="container-blog h-100 d-flex flex-column">
+                <div>
+                    <img src="https://nhatrangnow.com/wp-content/uploads/2022/05/PicsArt_08-25-09.22.38.jpg" class="w-100 img-blog">
+                </div>
+                <div class="p-2 d-flex flex-column justify-content-between flex-fill">
+                    <div>
+                        <h1>Kinh nghiệm đi du lịch nha trang</h1>
+                        <div class="text-right">18/03/2024</div>
+                        <div class="short-content mb-2">
+                            <span>Kinh nghiệm đi du lịch nha trang giành cho bạn, Kinh nghiệm đi du lịch nha trang giành cho bạn </span>
+                        </div>
+                    </div>
+                    <div class="text-end px-2">
+                        <a href="#" cl>Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 pb-3">
+            <div class="container-blog h-100 d-flex flex-column">
+                <div>
+                    <img src="https://nhatrangnow.com/wp-content/uploads/2022/05/PicsArt_08-25-09.22.38.jpg" class="w-100 img-blog">
+                </div>
+                <div class="p-2 d-flex flex-column justify-content-between flex-fill">
+                    <div>
+                        <h1>Kinh nghiệm đi du lịch nha trang</h1>
+                        <div class="text-right">18/03/2024</div>
+                        <div class="short-content mb-2">
+                            <span>Kinh nghiệm đi du lịch nha trang giành cho bạn, Kinh nghiệm đi du lịch nha trang giành cho bạn </span>
+                        </div>
+                    </div>
+                    <div class="text-end px-2">
+                        <a href="#" cl>Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 pb-3">
+            <div class="container-blog h-100 d-flex flex-column">
+                <div>
+                    <img src="https://nhatrangnow.com/wp-content/uploads/2022/05/PicsArt_08-25-09.22.38.jpg" class="w-100 img-blog">
+                </div>
+                <div class="p-2 d-flex flex-column justify-content-between flex-fill">
+                    <div>
+                        <h1>Kinh nghiệm đi du lịch nha trang</h1>
+                        <div class="text-right">18/03/2024</div>
+                        <div class="short-content mb-2">
+                            <span>Kinh nghiệm đi du lịch nha trang giành cho bạn, Kinh nghiệm đi du lịch nha trang giành cho bạn </span>
+                        </div>
+                    </div>
+                    <div class="text-end px-2">
+                        <a href="#" cl>Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-4 pb-3">
+            <div class="container-blog h-100 d-flex flex-column">
+                <div>
+                    <img src="https://nhatrangnow.com/wp-content/uploads/2022/05/PicsArt_08-25-09.22.38.jpg" class="w-100 img-blog">
+                </div>
+                <div class="p-2 d-flex flex-column justify-content-between flex-fill">
+                    <div>
+                        <h1>Kinh nghiệm đi du lịch nha trang</h1>
+                        <div class="text-right">18/03/2024</div>
+                        <div class="short-content mb-2">
+                            <span>Kinh nghiệm đi du lịch nha trang giành cho bạn, Kinh nghiệm đi du lịch nha trang giành cho bạn </span>
+                        </div>
+                    </div>
+                    <div class="text-end px-2">
+                        <a href="#" cl>Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock%}
