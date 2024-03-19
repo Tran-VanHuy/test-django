@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block title %} Login {% endblock %}
+{% load static %}
+{% block static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/login.css'%}">
+{% endblock %}
+{% block content %}
+<div class="container-login">
+    <form method="post" action="{% url 'login' %}">
+      
+        <div>
+            {{ form.non_field_errors }}
+            {% for field in form %}
+            {{ field }}
+            <div class="text-danger" style="font-size: 12px">{{ field.errors }}</div>
+            <br>
+            {% endfor %}
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-danger">Login</button>
+              {% csrf_token %}
+        </div>
+    </form>
+</div>
+{% endblock %}

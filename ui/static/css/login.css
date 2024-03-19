@@ -1,0 +1,25 @@
+body {
+
+	height:  100vh;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url("https://ik.imagekit.io/tvlk/blog/2023/07/bai-bien-nha-trang-8-1024x576.jpg?tr=dpr-2,w-675");
+	background-size: 100% 100%;
+
+}
+.container-login {
+
+	background: white;
+	width: 440px;
+	margin: auto auto;
+	border:  1px solid #e2e2e2;
+	padding: 5px;
+	padding: 20px;
+}
+
+.header {
+
+	display: none !important;
+}

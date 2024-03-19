@@ -17,9 +17,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from ui.views import *
+from django.contrib.auth.decorators import login_required
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomePage.as_view(), name = "home-page"),
-    path('blog/<slug>', BlogDetail.as_view(), name="blog-detail")
+    path('blog/<slug>', BlogDetail.as_view(), name="blog-detail"),
+    path('login', Login.as_view(), name="login"),
+    path('update/blog', UpdateBlog.as_view(), name="update-blog"),
+    path('edit/blog/<id>', UpdateBlogApi, name="edit-blog-api"),
+    path('logout', Logout.as_view(), name="logout")
 ]
